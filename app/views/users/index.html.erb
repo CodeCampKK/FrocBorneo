@@ -9,12 +9,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>John Doe</td>
-        <td>123</td>
-        <td>johndoe@gmail.com</td>
-        <td>N/A</td>
-      </tr>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.phoneNumber %></td>
+          <td><%= user.email %></td>
+          <td><%= link_to user.facebookUrl, user.facebookUrl %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>
