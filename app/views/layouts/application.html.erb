@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= semantic_flash %>
-  <%= yield %>
-
+  <div class="ui column grid">
+    <div class="column">
+      <%= render "shared/menu" %>
+      <%= semantic_flash %>
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>
